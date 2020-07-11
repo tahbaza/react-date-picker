@@ -51,7 +51,8 @@ function getValue(value, index) {
   const valueDate = new Date(rawValue);
 
   if (isNaN(valueDate.getTime())) {
-    throw new Error(`Invalid date: ${value}`);
+    return null;
+    // throw new Error(`Invalid date: ${value}`);
   }
 
   return valueDate;
